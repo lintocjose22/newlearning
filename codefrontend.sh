@@ -1,6 +1,5 @@
 script_Path=$(dirname $0)
-copy_Patth=$(pwd)
-echo $copy_Patth
+echo $ script_Path
 source ${script_Path}/common.sh
 yum install nginx -y
 systemctl enable nginx
@@ -10,8 +9,7 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.z
 cd /usr/share/nginx/html
 echo $pwd
 unzip /tmp/frontend.zip
-echo $script_Path
-sudo cp $script_Path/roboshop.conf /etc/nginx/default.d/
+sudo cp ${script_Path}/roboshop.conf /etc/nginx/default.d/
 useradd ${user_name}
 sed -i -e 's|/catalogue/ { proxy_pass http://localhost:|/catalogue/ { proxy_pass http://frontend.lintocjose.online:|' /etc/nginx/default.d/roboshop.conf
 systemctl restart nginx
