@@ -1,4 +1,5 @@
 function_test(){
-  echo ethan
+echo ethan
 
 }
+function_test
