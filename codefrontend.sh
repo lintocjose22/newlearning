@@ -1,4 +1,4 @@
-real_path=$(realpath $0)
+real_path=$(realpath "$0")
 echo $real_path
 script_Path=$(dirname "real_path")
 echo scriptpath is  $script_Path
