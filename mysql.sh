@@ -8,10 +8,12 @@ source ${script_Path}/common.sh
 dnf module disable mysql -y
 echo sql installed
 cp $script_Path/mysql.repo /etc/nginx/default.d/
-exit
+
 echo file copied
 yum install mysql-community-server -y
+
 echo mysql installed
+exit
 systemctl enable mysqld
 systemctl start mysql
 echo services started
