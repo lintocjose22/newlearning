@@ -1,4 +1,4 @@
-script_Path=${dirname $0}
+script_Path=$(dirname $0)
 source ${script_Path}/common.sh
 yum install nginx -y
 systemctl enable nginx
