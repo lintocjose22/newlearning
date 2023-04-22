@@ -1,3 +1,6 @@
+echo scriptname -$0
+echo first -$1
+exit
 real_path=$(realpath "$0")
 echo $real_path
 script_Path=$(dirname "$real_path")
