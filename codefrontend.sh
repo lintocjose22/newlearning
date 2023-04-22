@@ -10,7 +10,6 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.z
 cd /usr/share/nginx/html
 echo $pwd
 unzip /tmp/frontend.zip
-script_Path=$(dirname $0)
 echo $script_Path
 sudo cp $script_Path/roboshop.conf /etc/nginx/default.d/
 useradd ${user_name}
