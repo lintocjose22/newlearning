@@ -1,5 +1,5 @@
 real_path=$(realpath $0)
-script_Path=$(dirname $0)
+script_Path=$(dirname "real_path")
 echo $ script_Path
 source ${script_Path}/common.sh
 yum install nginx -y
