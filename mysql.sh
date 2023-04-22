@@ -7,13 +7,13 @@ echo scriptpath is  $script_Path
 source ${script_Path}/common.sh
 dnf module disable mysql -y
 echo sql installed
-cp $script_Path/mysql.repo /etc/nginx/default.d/
+cp $script_Path/mysql.repo /etc/yum.repos.d
 
 echo file copied
 yum install mysql-community-server -y
 
 echo mysql installed
-exit
+#exit
 systemctl enable mysqld
 systemctl start mysql
 echo services started
