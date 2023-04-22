@@ -1,6 +1,6 @@
 script_Path=$(dirname $0)
 copy_Patth=$(pwd)
-echo copy_Patth
+echo $copy_Patth
 source ${script_Path}/common.sh
 yum install nginx -y
 systemctl enable nginx
