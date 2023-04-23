@@ -1,6 +1,6 @@
 fruit=mango
 count=10
-if["$fruit"=="mango"]
+if[ "$fruit"=="mango" ]
 then
-edco mago count is $count
+echo mago count is $count
 fi
